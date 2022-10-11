@@ -26,6 +26,8 @@ public class ListAggregator {
      */
     public Integer max(List<Integer> list) {
         int max = 0;
+        if(list.size() > 0)
+            max = list.get(0);
 
         for (Integer number : list)
             if (number > max)
