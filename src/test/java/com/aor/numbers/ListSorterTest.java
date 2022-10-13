@@ -21,6 +21,17 @@ public class ListSorterTest {
         Assertions.assertEquals(expected, sorted);
     }
 
+    @Test
+    public void testBug5(){
+        List<Integer> newList = Arrays.asList(1,2,4,2);
+        List<Integer> expected = Arrays.asList(1, 2, 2, 4);
+
+        ListSorter sorter = new ListSorter();
+        List<Integer> sorted = sorter.sort(newList);
+
+        Assertions.assertEquals(expected, sorted);
+    }
+
     @BeforeEach
     public void helper(){
         list = Arrays.asList(3, 2, 6, 1, 4, 5, 7);
